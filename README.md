@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MRMNSALT - Salt Brokerage Platform
 
 A comprehensive platform for salt brokerage companies, featuring both a public website and internal application.
@@ -14,6 +13,7 @@ MRMNSALT/
 │   └── frontend/         # Internal app (future development)
 ├── shared/               # Shared utilities and types
 ├── database/             # Database migrations and schemas
+├── index.js              # Backend server entry point
 ├── start.ps1             # Windows PowerShell startup script
 ├── start.sh              # Linux/Mac bash startup script
 └── package.json          # Root package with unified scripts
@@ -82,7 +82,7 @@ npm run start:website    # Website only
 Once running, access the services at:
 
 - **Frontend Website**: http://localhost:3000
-- **Backend API**: http://localhost:5000 (or configured port)
+- **Backend API**: http://localhost:5000
 
 ## 🛠️ Available Scripts
 
@@ -115,16 +115,60 @@ Once running, access the services at:
 
 - The backend uses CommonJS modules (`type: "commonjs"`)
 - Frontend runs on port 3000 by default
-- Backend API configuration in root `package.json`
+- Backend API runs on port 5000
 - Database connection configured via `.env` file
 
 ## 🔒 Environment Variables
 
 Ensure your `.env` file contains:
 ```
-DATABASE_URL=postgresql://...
+DB_HOST=db.bvvquhgqsgxrpwlqgwic.supabase.co
+DB_PORT=5432
+DB_NAME=postgres
+DB_USER=postgres
+DB_PASSWORD=your_password_here
 PORT=5000
 ```
+
+## 🚀 Deployment
+
+### Vercel Deployment (Frontend)
+
+1. Install Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Deploy the website:
+   ```bash
+   cd frontend/website
+   vercel
+   ```
+
+3. Connect your GoDaddy domain in Vercel dashboard:
+   - Go to your project settings
+   - Add your custom domain
+   - Update DNS records in GoDaddy
+
+### Backend Deployment
+
+For production, consider deploying the backend to:
+- **Vercel** (Serverless functions)
+- **Railway**
+- **Render**
+- **Heroku**
+
+## 🌐 Custom Domain Setup (GoDaddy)
+
+After deploying to Vercel:
+
+1. Go to Vercel project settings → Domains
+2. Add your GoDaddy domain (e.g., `yourdomain.com`)
+3. Vercel will provide DNS records
+4. In GoDaddy DNS Management, add:
+   - **A Record**: `@` → Vercel IP
+   - **CNAME**: `www` → `cname.vercel-dns.com`
+5. Wait for DNS propagation (up to 48 hours)
 
 ## 🤝 Contributing
 
@@ -140,6 +184,3 @@ ISC
 ---
 
 **Note**: This project is designed for salt brokerage operations. The `app/` directory contains placeholder structure for future internal application development.
-=======
-# mrmn
->>>>>>> 246057645c53bc33be74554a90d751f8972180d9

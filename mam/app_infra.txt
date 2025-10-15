@@ -1,0 +1,38 @@
+my-app/
+├── src/
+│   ├── config/
+│   │   ├── index.js          // Environment variables, general app settings
+│   │   └── database.js       // PostgreSQL connection configuration
+│   ├── controllers/
+│   │   ├── auth.controller.js
+│   │   └── user.controller.js
+│   ├── middlewares/
+│   │   ├── auth.middleware.js
+│   │   └── error.middleware.js
+│   ├── models/
+│   │   ├── user.model.js     // Prisma schema or ORM models
+│   │   └── product.model.js
+│   ├── routes/
+│   │   ├── v1/
+│   │   │   ├── index.js      // Consolidates all v1 routes
+│   │   │   ├── auth.routes.js
+│   │   │   └── user.routes.js
+│   │   └── index.js          // Main router for API versions
+│   ├── services/             // Business logic, interactions with models
+│   │   ├── auth.service.js
+│   │   └── user.service.js
+│   ├── utils/
+│   │   ├── logger.js
+│   │   └── helpers.js
+│   └── app.js                // Main Express application file
+├── public/                   // Static assets (CSS, JS, images for client-side)
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── prisma/                   // If using Prisma for ORM
+│   └── schema.prisma
+├── .env                      // Environment variables (local)
+├── .gitignore
+├── package.json
+├── vercel.json               // Vercel deployment configuration
+└── README.md

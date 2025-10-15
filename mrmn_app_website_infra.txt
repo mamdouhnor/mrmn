@@ -1,0 +1,31 @@
+my-project/
+│
+├── frontend/
+│   ├── website/       # React web app
+│   └── app/           # React (Native or PWA) app
+│
+├── backend/           # Node.js + Express
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── middleware/
+│   │   ├── config/
+│   │   └── index.js
+│   └── tests/
+│
+├── shared/            # Shared code (e.g., Types, Utils, Constants)
+│   ├── types/
+│   ├── utils/
+│   └── constants/
+│
+├── database/
+│   ├── migrations/
+│   ├── seeders/
+│   └── schema.sql
+│
+├── .env
+├── docker-compose.yml
+├── package.json       # Root scripts (optional)
+└── README.md

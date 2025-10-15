@@ -1,0 +1,14 @@
+Shared (Optional but Powerful)
+shared/
+├── types/
+│   └── user.ts
+├── constants/
+│   └── roles.ts
+├── utils/
+│   └── formatDate.ts
+
+To avoid duplication between frontend and backend (like validation schemas, enums, etc.)
+
+****************************
+
+

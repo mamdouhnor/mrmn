@@ -1,0 +1,46 @@
+/* App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin-top: 70px; /* Account for fixed navbar */
+}
+
+/* Global Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #2563eb;
+  margin: 1rem auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    margin-top: 60px;
+  }
+}
